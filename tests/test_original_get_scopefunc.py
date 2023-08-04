@@ -33,7 +33,7 @@ def fixture_db():
     db.drop_all()
 
 
-def test_create(app, db):
+def test_session_context(app, db):
     event = Event()
     db.session.add(event)
     db.session.commit()
