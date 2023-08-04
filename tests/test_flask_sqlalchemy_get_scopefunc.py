@@ -27,7 +27,7 @@ def create_app():
     return app
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture
 def app():
     _app = create_app()
     with _app.test_request_context():
